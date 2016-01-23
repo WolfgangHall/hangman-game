@@ -5,7 +5,7 @@ function Letter(charac, appear) {
         if (this.charac === false) {
             return "_";
         } else {
-            return charac;
+            return this.charac;
         }
     }
 }

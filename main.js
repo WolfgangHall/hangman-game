@@ -21,7 +21,7 @@ var game =  {
             console.log("you guess right!");
             return 1;
         }
-        console.log('Guesses Remaining ' + guessesRemaining);
+        console.log('Guesses Remaining ' + this.guessesRemaining);
         console.log(word.wordRender(currentWrd));
         if (this.guessesRemaining > 0 && this.currentWrd.found === false) {
             this.keepPromptingUser();
@@ -29,7 +29,7 @@ var game =  {
             console.log("Game over mate!");
             console.log(this.wordBank);
         } else {
-            console.log(wordRender(currentWrd));
+            console.log(word.wordRender(currentWrd));
         }
     }
 }
