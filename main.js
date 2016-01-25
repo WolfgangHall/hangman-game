@@ -13,7 +13,7 @@ var game =  {
       this.currentWrd = this.wordBank;
       this.currentWrd.getLets();
       this.keepPromptingUser();
-  }
+  },
   keepPromptingUser: function () {
       var self = this;
       prompt.get(['guessLetter'], function(err, result){
@@ -43,7 +43,7 @@ var game =  {
         } else {
             console.log(word.wordRender(currentWrd));
         }
-    }
+    });
 }
 }
 

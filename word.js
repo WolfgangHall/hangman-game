@@ -16,7 +16,7 @@ var Word = function(wrd) {
         for (var i = 0; i < this.lets.length; i++){
             if (this.lets.charac === this.guessLetter) {
                 this.lets.appear = true;
-                whatToReturn +=;
+                whatToReturn ++;
                 
             }
         }
@@ -24,7 +24,12 @@ var Word = function(wrd) {
     };
 
     this.didWeFindTheWord = function () {
-        .every(this.lets);
+        if(this.lets.every(function(curLet){
+            if(curLet.appear === true) {
+                this.found = true;
+            }
+        })
+            return this.found;
     }
 
     this.wordRender = function () {
