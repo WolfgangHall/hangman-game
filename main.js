@@ -6,15 +6,15 @@ prompt.start();
 
 
 var game =  {
-   this.wordBank: ["the man who sold the world"],
-   this.guessesRemaining: 10,
-   this.currentWrd: null,
-   this.startGame = function (wrd) {
+   wordBank: ["the man who sold the world"],
+   guessesRemaining: 10,
+   currentWrd: null,
+   startGame:  function () {
       this.currentWrd = this.wordBank;
       this.currentWrd.getLets();
       this.keepPromptingUser();
   }
-  this.keepPromptingUser = function () {
+  keepPromptingUser: function () {
       var self = this;
       prompt.get(['guessLetter'], function(err, result){
         if (result.guessLetter !== " ") {
